@@ -19,12 +19,12 @@ footer{
 section{
     background-color: white;
     box-shadow: 0 2px 5px black;
-   border-radius: 10px;
+    border-radius: 10px;
     padding: 20px;
     margin: 10px;
 }
 h2{
-    color:violet
+    color:violet;
 }
 form label{
     display: block;
@@ -50,7 +50,7 @@ form textarea{
 nav ul{
     list-style: none;
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
 }
 nav li{
     margin: 5px;
