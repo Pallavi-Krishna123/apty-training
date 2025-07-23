@@ -1,11 +1,11 @@
-var str = "10";
-var num = 5;
-var bool = true;
-var undef;
-var nul = null;
-var obj = { a: 100 };
+const str = "10";
+const num = 5;
+const bool = true;
+let undef;
+const nul = null;
+const obj = { a: 100 };
 
-var results = document.getElementById("output");
+const results = document.getElementById("output");
 
 
 function showResult(a, b) {
