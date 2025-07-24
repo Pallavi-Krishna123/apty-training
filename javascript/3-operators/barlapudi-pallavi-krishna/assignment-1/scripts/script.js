@@ -1,6 +1,6 @@
 function getValues() {
-  const val1 = parseFloat(document.getElementById("value1").value);
-  const val2 = parseFloat(document.getElementById("value2").value);
+  const val1 = document.getElementById("value1").value;
+  const val2 = document.getElementById("value2").value;
   return { val1, val2 };
 }
 
@@ -34,13 +34,13 @@ function modulus() {
 }
 
 function increment() {
-  let val1 = parseFloat(document.getElementById("value1").value);
+  let val1 = document.getElementById("value1").value;
   val1++;
   document.getElementById("result").innerText = `Incremented value1: ${val1}`;
 }
 
 function decrement() {
-  let val1 = parseFloat(document.getElementById("value1").value);
+  let val1 = document.getElementById("value1").value;
   val1--;
   document.getElementById("result").innerText = `Decremented value1: ${val1}`;
 }
