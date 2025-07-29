@@ -1,13 +1,14 @@
 function calculateFactorial() {
   const num = parseInt(document.getElementById("number").value);
+  document.getElementById("results").innerHTML ="";
 
   if (isNaN(num) || num < 0) {
-    steps = "1";
     document.getElementById("results").innerText = "Enter a positive number.";
     return;
   } else {
-    fact = 1;
-    i = 1;
+    let steps = "1";
+    let fact = 1;
+    let i = 1;
     do {
       steps =fact;
       fact *= i;

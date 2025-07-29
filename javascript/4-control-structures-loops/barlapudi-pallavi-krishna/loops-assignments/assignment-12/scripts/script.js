@@ -3,6 +3,8 @@ function generate(){
     const num2=parseInt(document.getElementById("number2").value);
     let count=0;
 
+    document.getElementById("results").innerHTML ="";
+
     if (isNaN(num1) || isNaN(num2) || num1 > num2) {
         document.getElementById("results").innerHTML = "Please enter a valid range.";
         return;
