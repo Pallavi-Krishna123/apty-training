@@ -8,6 +8,10 @@ document.getElementById("fibonacciBtn").addEventListener("click", function (even
     event.preventDefault();
 
     const num = parseInt(document.getElementById("number").value);
+    if(isNaN(num)){
+      document.getElementById("result").innerText="Please enter a valid number";
+      return;
+    }
     let series = [];
 
     for (let i = 0; i <= num; i++) {

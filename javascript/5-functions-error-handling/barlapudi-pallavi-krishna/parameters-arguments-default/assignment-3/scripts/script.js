@@ -1,25 +1,25 @@
-function perimeter(length=10,breadth=10){
-    function area(length,breadth){
-        const areares=length*breadth;
-        document.getElementById("results").innerHTML+=`Area of Rectangle: ${areares}`;
+function perimeter(length = 10, breadth = 10) {
+    function area(length, breadth) {
+        const areares = length * breadth;
+        return areares;
     }
-    document.getElementById("results").innerHTML="";
-    const perimeterres=2*(length*breadth);
-    document.getElementById("results").innerHTML+=`Perimeter of Rectangle: ${perimeterres}<br>`;
-    area(length,breadth);
+    const perimeterres = 2 * (length + breadth);
+    const arearesult = area(length, breadth);
+
+    return { perimeterres, arearesult };
 }
 
-
-
-
-
-document.getElementById("form").addEventListener("submit",function(event){
+document.getElementById("form").addEventListener("submit", function(event) {
     event.preventDefault();
-    let num1=document.getElementById("length").value;
-    let num2=document.getElementById("breadth").value;
 
-    let number1 = num1 ? parseFloat(num1) : undefined;
-    let number2 = num2 ? parseFloat(num2) : undefined;
+    const num1 = document.getElementById("length").value;
+    const num2 = document.getElementById("breadth").value;
 
-    perimeter(number1,number2);
-})
+    const number1 = num1 ? parseFloat(num1) : undefined;
+    const number2 = num2 ? parseFloat(num2) : undefined;
+
+    const res = perimeter(number1, number2);
+
+    document.getElementById("results").innerHTML = `Perimeter: ${res.perimeterres},Area: ${res.arearesult}
+    `;
+});

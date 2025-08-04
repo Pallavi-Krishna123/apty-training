@@ -11,7 +11,7 @@ function createBankAccount() {
       }
     },
     withdraw: function (amount) {
-      if (amount <= 0) return "Enter a valid withdrawal amount.";
+      if (isNaN(amount)||amount <= 0) return "Enter a valid withdrawal amount.";
       if (amount > balance) return "Insufficient balance.";
       balance -= amount;
       return `Withdrew ₹${amount}.`;

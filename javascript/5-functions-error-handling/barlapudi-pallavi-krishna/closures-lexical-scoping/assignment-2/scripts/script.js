@@ -14,9 +14,7 @@ document
     const first = document.getElementById("firstName").value;
     const last = document.getElementById("lastName").value;
     const city = document.getElementById("city").value;
-    const result = outerFunction(first)((middleFunction = last))(
-      (innerFunction = city)
-    );
+    const result = outerFunction(first)(last)(city);
 
     document.getElementById("output").innerText = result;
   });
