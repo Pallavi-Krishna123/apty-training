@@ -5,7 +5,7 @@ function processNumbers() {
   try {
     const numbers = JSON.parse(input);
 
-    if (!Array.isArray(numbers)) {
+    if (!Array.isArray(numbers)||numbers.some(item=>typeof item!=='number')) {
       throw "Input must be a valid array of numbers.";
     }
 

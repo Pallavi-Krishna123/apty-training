@@ -4,7 +4,7 @@ function sortObjects() {
   output.innerHTML = "";
 
   try {
-    let students = JSON.parse(input);
+    const students = JSON.parse(input);
 
     students.sort(function(a, b) {
       return b.score - a.score;

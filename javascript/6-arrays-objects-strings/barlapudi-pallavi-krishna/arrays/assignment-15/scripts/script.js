@@ -1,5 +1,8 @@
 function transposeMatrix(matrix) {
   const rows = matrix.length;
+  if(matrix.length===0||matrix[0].length===0){
+    return [];
+  }
   const cols = matrix[0].length;
   const result = [];
 

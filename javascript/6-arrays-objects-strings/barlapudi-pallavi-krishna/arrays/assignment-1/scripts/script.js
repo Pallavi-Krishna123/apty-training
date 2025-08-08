@@ -18,6 +18,10 @@ function flattenArray() {
 
   try {
     const parsed = JSON.parse(input);
+    if (!Array.isArray(parsed)) {
+      output.textContent = "Invalid input. Please enter a valid nested array using square brackets.";
+      return;
+    }
     const flattened = customFlatten(parsed);
     output.textContent = `[ ${flattened.join(", ")} ]`;
   } catch {

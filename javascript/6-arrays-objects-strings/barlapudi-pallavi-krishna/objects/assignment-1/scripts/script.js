@@ -1,4 +1,4 @@
-object={};
+let object={};
 function convertObject(){
     const key=document.getElementById("userKey").value.trim();
     const value=document.getElementById("userValue").value;
@@ -8,6 +8,5 @@ function convertObject(){
     return;
   }
    object[key]=value;
-
    document.getElementById("result").textContent = JSON.stringify(object);
 }

@@ -10,7 +10,7 @@ function handleChunk() {
   const size = parseInt(document.getElementById("chunkSize").value);
 
   if (!input || isNaN(size) || size <= 0) {
-    document.getElementById("result").textContent =
+    document.getElementById("results").textContent =
       "Please enter a valid array and a positive chunk size.";
     return;
   }
